@@ -1,0 +1,56 @@
+---
+const navItems = [
+	{
+		title: 'Home',
+		label: 'home',
+		url: '/#home'
+	},
+	{
+		title: 'Projects',
+		label: 'projects',
+		url: '/#projects'
+	},
+	{
+		title: 'Awards',
+		label: 'awards',
+		url: '/#awards'
+	},
+	{
+		title: 'About',
+		label: 'about',
+		url: '/#about'
+	}
+]
+---
+
+<header class="fixed z-10 mx-auto mt-2 flex w-full items-center justify-center">
+	<nav
+		class="flex items-center justify-center rounded-full px-3 text-sm font-medium text-secondary"
+	>
+		{
+			navItems.map((link) => (
+				<a
+					class="relative block px-2 py-2 transition hover:text-primary"
+					aria-label={link.label}
+					href={link.url}
+				>
+					{link.title}
+				</a>
+			))
+		}
+	</nav>
+</header>
+
+<style>
+	nav {
+		animation: nav-shadown 1s linear both;
+		animation-timeline: scroll();
+		animation-range: 0 200px;
+	}
+
+	@keyframes nav-shadown {
+		to {
+			@apply bg-white/5 ring-white/10 shadow-lg ring-1 backdrop-blur-sm;
+		}
+	}
+</style>
