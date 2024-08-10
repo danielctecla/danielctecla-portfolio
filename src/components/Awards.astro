@@ -1,0 +1,91 @@
+---
+const AwardsItems = [
+	{
+		title: 'Talent Land Hackathon – Coppel Foundation',
+		description:
+			'1st place in a national competition, as part of a 4-person team (ESCoders), by developing a tool to empower microentrepreneurs.',
+		link: 'https://hackathon.genius-arena.com/',
+		image: '/assets/images/talentland-award.webp',
+		alt: 'Talent Land Hackathon 2024 – Coppel Foundation',
+		date: 'April 2024',
+		setcol: 'md:col-span-2'
+	},
+	{
+		title: 'HackMexico Hackathon - AngelHack',
+		description:
+			'Participated as part of a 4-person team in a national competition, reaching the semifinals with a digital platform for accessible tourism in Mexico.',
+		link: 'https://www.virtualbadge.io/certificate-validator?credential=ad6c16ef-f6c9-4eaa-b0fe-69092301defb',
+		image: '/assets/images/hackmexico-award.webp',
+		alt: 'HackMexico Hackathon - AngelHack',
+		date: 'April 2024',
+		setcol: ''
+	},
+	{
+		title: 'Gran Premio de México - ICPC',
+		description:
+			'Participated in the “Gran Premio de México ICPC 2023” with the team “Una línea a la vez”.',
+		link: 'https://icpc.global/ICPCID/9GCUW3KDZY8J',
+		image: '/assets/images/icpc-award.webp',
+		alt: 'Gran Premio de México - ICPC',
+		date: 'Still participating...',
+		setcol: ''
+	}
+]
+---
+
+<div class="mb-7 flex flex-row items-center gap-4">
+	<div class="line-separator my-2 flex-1"></div>
+	<h2 class="text-2xl font-semibold tracking-tight text-tx-primary md:text-4xl">
+		Featured
+		<span class="outline-text">Awards</span>
+	</h2>
+	<div class="line-separator my-2 flex-1"></div>
+</div>
+<div class="mx-auto grid w-full grid-cols-1 gap-8 sm:w-4/5 md:w-full md:grid-cols-2 md:gap-4">
+	{
+		AwardsItems.map(({ title, description, link, image, alt, date, setcol }) => (
+			<a class={`art-item group flex flex-col ${setcol}`} href={link}>
+				<div class="relative z-[1] flex h-72 w-full flex-col items-stretch justify-between overflow-hidden rounded-xl p-6 md:h-96">
+					<h3 class="mt-auto text-xl font-semibold tracking-tight text-gray-100">{title}</h3>
+					<div class="line-separator my-2" />
+					<div class="w-full text-tx-primary md:max-w-2xl">
+						<p class="line-clamp-3 text-sm font-medium text-gray-200">{description}</p>
+					</div>
+					<div class="mt-1 text-xs text-[#bbb]">{date}</div>
+					<div class="gradient-overlay" />
+					<img src={image} alt={alt} class="image-absolute h-full w-full" loading="eager" />
+				</div>
+			</a>
+		))
+	}
+</div>
+
+<style scoped>
+	.gradient-overlay {
+		z-index: -1;
+		background-image: linear-gradient(to bottom, transparent 0%, #05090e);
+		position: absolute;
+		top: 0%;
+		bottom: 0%;
+		left: 0%;
+		right: 0%;
+	}
+
+	.art-item:hover .image-absolute {
+		transform: scale(1.1);
+	}
+
+	.image-absolute {
+		z-index: -2;
+		object-fit: cover;
+		object-position: center;
+		min-width: 100%;
+		position: absolute;
+		top: 0%;
+		bottom: 0%;
+		left: 0%;
+		right: 0%;
+		transition: transform 0.3s ease;
+		opacity: 0.7;
+	}
+</style>

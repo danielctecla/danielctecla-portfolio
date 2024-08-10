@@ -1,0 +1,102 @@
+---
+import ProjectCard from './ProjectCard.astro'
+
+import CplusplusIcon from './icons/CplusplusIcon.astro'
+import PythonIcon from './icons/PythonIcon.astro'
+import ReactIcon from './icons/ReactIcon.astro'
+import TailwindIcon from './icons/TailwindIcon.astro'
+
+const Tags = {
+	Cplusplus: {
+		name: 'C++',
+		class: 'bg-black/90 text-white',
+		icon: CplusplusIcon
+	},
+	Python: {
+		name: 'Python',
+		class: 'bg-[#003159]/90 text-white',
+		icon: PythonIcon
+	},
+	React: {
+		name: 'React',
+		class: 'bg-[#1a1a1a]/90 text-white',
+		icon: ReactIcon
+	},
+	Tailwind: {
+		name: 'Tailwind',
+		class: 'bg-[#003159]/90 text-white',
+		icon: TailwindIcon
+	}
+}
+const ProjectsItems = [
+	{
+		title: 'DevInterview - Enhance interview skills',
+		description:
+			'Platform that allows you to practice technical interviews to enhance your skills and get a job in the tech industry.',
+		link: 'https://devinterview.vercel.app/',
+		github: 'https://github.com/mvnueloc/DevInterview',
+		tags: [Tags.React, Tags.Tailwind],
+		image: '/assets/images/devinterview-bg.webp',
+		alt: 'DevInterview project image',
+		date: 'July 2024',
+		members: [
+			{
+				name: 'danielctecla',
+				link: 'https://github.com/danielctecla',
+				image: 'https://avatars.githubusercontent.com/u/94944243?v=4'
+			},
+			{
+				name: 'mvnueloc',
+				link: 'https://github.com/mvnueloc',
+				image: 'https://avatars.githubusercontent.com/u/128934926?v=4'
+			},
+			{
+				name: 'Antxnszn',
+				link: 'https://github.com/Antxnszn',
+				image: 'https://avatars.githubusercontent.com/u/147531709?v=4'
+			}
+		]
+	},
+	{
+		title: 'Binary Classificator - Machine Learning',
+		description:
+			'Binary classificator that uses k-means++ and KNN algorithms to classify data points into two classes.',
+		github: 'https://github.com/danielctecla/binary-classifier',
+		tags: [Tags.Cplusplus],
+		image: '/assets/images/classificator-bg.webp',
+		alt: 'Binary Classificator project image',
+		date: 'December 2023',
+		members: [
+			{
+				name: 'danielctecla',
+				link: 'https://github.com/danielctecla',
+				image: 'https://avatars.githubusercontent.com/u/94944243?v=4'
+			}
+		]
+	}
+]
+---
+
+<div class="mb-7 flex flex-row items-center gap-4">
+	<h2 class="text-2xl font-semibold tracking-tight text-tx-primary md:text-4xl">
+		Featured
+		<span class="outline-text">Projects</span>
+	</h2>
+	<div class="line-separator my-2 flex-1"></div>
+</div>
+<div class="flex flex-col gap-y-16">
+	{
+		ProjectsItems.map(({ tags, ...project }) => (
+			<ProjectCard project={project}>
+				{tags.map((tag) => (
+					<li>
+						<span class={`flex items-center gap-x-2 rounded-full text-sm ${tag.class} px-2 py-1`}>
+							<tag.icon class="size-4" />
+							{tag.name}
+						</span>
+					</li>
+				))}
+			</ProjectCard>
+		))
+	}
+</div>

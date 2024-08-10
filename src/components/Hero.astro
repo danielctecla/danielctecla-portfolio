@@ -1,23 +1,48 @@
 ---
 import SocialLink from './SocialLink.astro'
+
+//Icons
 import LinkedIn from './icons/LinkedIn.astro'
+import Mail from './icons/Mail.astro'
+import Github from './icons/Github.astro'
 ---
 
 <>
-	<div></div>
-	<div class="flex max-w-xl flex-col justify-between lg:max-w-2xl">
-		<h1 class="text-text text-4xl font-bold tracking-tight sm:text-5xl">I'm Daniel Catonga</h1>
-		<p class="text-accent text-2xl font-semibold tracking-tight sm:text-3xl">
-			Artificial Intelligence Student
+	<!-- <Banner /> -->
+	<div class="flex flex-col justify-between">
+		<!-- <h1 class="text-4xl font-bold tracking-tight text-tx-primary sm:text-5xl">I'm Daniel Catonga</h1>
+		<h2 class="mt-2 text-2xl font-semibold tracking-tight text-accent sm:text-3xl">
+			software developer & <br />
+			artificial intelligence student
+		</h2> -->
+		<h2 class="max-w-xl text-4xl font-bold tracking-tight text-tx-primary sm:text-5xl lg:max-w-2xl">
+			software
+			<span class="outline-text">developer</span>
+			& <br />
+			artifial intelligence
+			<span class="outline-text">student</span>
+		</h2>
+
+		<p
+			class="mt-6 max-w-2xl text-xl text-tx-secondary [&>strong]:font-semibold [&>strong]:text-accent"
+		>
+			I am a passionate of <strong>Machine Learning</strong>. I am always looking for new challenges
+			and opportunities to learn and grow.
 		</p>
-		<p class="[&>strong]:text-accent mt-6 text-xl text-secondary [&>strong]:font-semibold">
-			I am a passionate student of <strong>Artificial Intelligence and Machine Learning</strong>. I
-			am always looking for new challenges and opportunities to learn and grow.
-		</p>
+		<h3 class="text-lg font-semibold tracking-tight text-accent sm:text-xl">- Daniel Catonga</h3>
+
 		<div class="mt-8 flex flex-wrap gap-4">
+			<SocialLink href="https://github.com/danielctecla">
+				<Github class="size-4" />
+				Github
+			</SocialLink>
 			<SocialLink href="https://linkedin.com/in/danielctecla">
 				<LinkedIn class="size-4" />
 				LinkedIn
+			</SocialLink>
+			<SocialLink href="mailto:daniel.ctecla@gmail.com">
+				<Mail class="size-4" />
+				daniel.ctecla@gmail.com
 			</SocialLink>
 		</div>
 	</div>
