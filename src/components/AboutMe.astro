@@ -1,0 +1,61 @@
+---
+import ButtonLink from './ButtonLink.astro'
+import Preview from './icons/Preview.astro'
+---
+
+<!-- <h2 class="mb-6 flex items-center gap-x-8 text-3xl font-semibold text-tx-primary">
+		Daniel Isaí Catonga
+	</h2> -->
+<div class="mb-7 flex flex-row items-center gap-4">
+	<h2 class="text-2xl font-semibold tracking-tight text-tx-primary md:text-4xl">
+		Aboute
+		<span class="outline-text">Me</span>
+	</h2>
+	<div class="line-separator my-2 flex-1"></div>
+</div>
+<div class="flex flex-col gap-10 lg:flex-row-reverse">
+	<div class="flex w-full flex-row lg:max-w-72 lg:flex-col">
+		<img
+			src="assets/images/me.webp"
+			alt="Daniel Isaí Catonga"
+			class="max-w-56 rounded-xl sm:max-w-72 md:w-full"
+		/>
+		<div class="ml-6 mt-4 flex flex-col justify-end text-tx-primary sm:ml-8">
+			<p class="text-lg font-medium">Daniel Isaí Catonga</p>
+			<p class="text-sm font-light">student</p>
+		</div>
+	</div>
+	<div>
+		<h2
+			class="my-4 text-2xl font-normal tracking-tight text-tx-primary md:text-4xl md:font-light lg:my-0"
+		>
+			Think Twice and Code Once.
+		</h2>
+		<p class="mt-8 text-base text-tx-secondary sm:text-lg [&>strong]:text-accent">
+			I'm a student of
+			<strong>
+				artificial intelligence engineering at <a
+					href="https://www.escom.ipn.mx/"
+					class="font-bold underline decoration-accent"
+				>
+					ESCOM</a
+				>
+			</strong>. I am passionate about machine learning algorithms because I like the mathematics
+			behind them.
+		</p>
+		<p class="mt-3 text-base text-tx-secondary sm:text-lg [&>strong]:text-accent">
+			I <strong> practice competitive programming </strong> for fun, which allows me to sharpen my skills
+			and stay up-to-date with the latest trends in the field.
+		</p>
+		<p class="mt-3 text-base text-tx-secondary sm:text-lg [&>strong]:text-accent">
+			My goal is to continue growing as a developer and contribute to the advancement of artificial
+			intelligence.
+		</p>
+		<div class="mt-5">
+			<ButtonLink href="/assets/documents/daniel_catonga_resume.pdf">
+				<Preview class="size-4" />
+				Resume
+			</ButtonLink>
+		</div>
+	</div>
+</div>

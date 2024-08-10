@@ -4,13 +4,20 @@ export default {
 	theme: {
 		extend: {
 			colors: {
-				background: '#0D1117',
-				primary: '#C9D1D9',
-				secondary: '#BBBBBB',
-				third: '#426187',
-				accent: '#a7bbd2',
-				text: '#FFFFFF',
+				'background-primary': '#0B0B0B',
+				'background-secondary': '#18181B',
+				'primary': '#C9D1D9',
+				accent: '#99B3D1',
+				'accent-secondary': '#426187',
+				'tx-primary': '#FFFFFF',
+				'tx-secondary': '#FAF9F6',
 			},
+			height: {
+				'project-card': '29rem',
+			},
+			screens: {
+				'base': '990px'
+			}
 		},
 	},
 	plugins: [],
