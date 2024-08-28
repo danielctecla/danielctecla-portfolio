@@ -23,12 +23,12 @@ const navItems = [
 ]
 ---
 
-<header class="fixed z-10 mx-auto mt-4 flex w-full items-center justify-center">
+<header class="fixed z-10 mx-auto mt-4 hidden w-full items-center justify-center md:flex">
 	<nav class="flex items-center justify-center rounded-full px-3 text-sm font-medium">
 		{
 			navItems.map((link) => (
 				<a
-					class="text-tx-primary relative block px-2 py-2 transition hover:text-accent"
+					class="relative block px-2 py-2 text-tx-primary transition hover:text-accent"
 					aria-label={link.label}
 					href={link.url}
 				>
@@ -43,7 +43,7 @@ const navItems = [
 	nav {
 		animation: nav-shadown 1s linear both;
 		animation-timeline: scroll();
-		animation-range: 0 200px;
+		animation-range: 0 25px;
 	}
 
 	@keyframes nav-shadown {
