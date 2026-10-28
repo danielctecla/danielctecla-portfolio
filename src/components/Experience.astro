@@ -1,0 +1,42 @@
+---
+import Entry from './Entry.astro'
+
+const ExperienceItems = [
+	{
+		role: 'Software Engineer Intern',
+		company: 'Infosys',
+		link: 'https://www.infosys.com/',
+		location: 'Bangalore',
+		date: '2026',
+		description:
+			'Built an AI agent marketplace on the Beckn Protocol, including an LLM planner that turns natural-language requests into multi-agent execution plans.'
+	},
+	{
+		role: 'Backend Developer',
+		company: 'Guna',
+		location: 'Mexico City',
+		date: '2025',
+		description:
+			'Worked on an inventory management system in C# and SQL Server deployed across 12 states, with reporting that brought 21 distribution centers into one view.'
+	},
+	{
+		role: 'Co-founder & Software Engineer',
+		company: 'PractiPuma',
+		link: 'https://practipuma.com',
+		location: 'Mexico City',
+		date: '2023–now',
+		description:
+			'Building a subscription platform for UNAM admission exam prep with Next.js, AWS and Stripe.'
+	}
+]
+---
+
+<ul class="space-y-6">
+	{
+		ExperienceItems.map(({ role, company, link, location, date, description }) => (
+			<Entry title={company} href={link} meta={`${role} · ${location}`} date={date}>
+				{description}
+			</Entry>
+		))
+	}
+</ul>

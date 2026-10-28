@@ -1,26 +1,12 @@
 ---
-import TerminalIcon from './icons/TerminalIcon.astro'
-import GithubRoundedIcon from './icons/GithubRoundedIcon.astro'
-import InstagramIcon from './icons/InstagramIcon.astro'
 const currentYear = new Date().getFullYear()
 ---
 
-<footer class="relative mb-10 mt-16 px-4">
-	<div class="container mx-auto flex flex-row justify-between md:max-w-2xl lg:max-w-4xl">
-		<div class="inline-flex items-center gap-2">
-			<TerminalIcon class="hidden size-6 sm:block" />
-			<p class="text-tx-primary hidden border-r border-white/50 pr-2 text-sm sm:block">
-				Daniel Catonga
-			</p>
-			<span class="text-tx-primary text-sm">© {currentYear} danielctecla</span>
-		</div>
-		<div class="inline-flex items-center gap-4">
-			<a href="https://instagram.com/danielctecla">
-				<InstagramIcon class="size-5" />
-			</a>
-			<a href="https://github.com/danielctecla">
-				<GithubRoundedIcon class="size-5" />
-			</a>
-		</div>
+<footer class="mt-20 px-4 pb-12">
+	<div
+		class="mx-auto flex max-w-2xl justify-between border-t border-background-secondary pt-6 font-mono text-xs text-tx-secondary"
+	>
+		<span>© {currentYear} Daniel Catonga</span>
+		<a href="#" class="transition-colors hover:text-tx-primary">back to top ↑</a>
 	</div>
 </footer>

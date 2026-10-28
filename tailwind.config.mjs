@@ -4,21 +4,17 @@ export default {
 	theme: {
 		extend: {
 			colors: {
-				'background-primary': '#0B0B0B',
-				'background-secondary': '#18181B',
-				'primary': '#C9D1D9',
-				accent: '#99B3D1',
-				'accent-secondary': '#426187',
-				'tx-primary': '#FFFFFF',
-				'tx-secondary': '#FAF9F6',
+				'background-primary': '#FAF8F2',
+				'background-secondary': '#E8E3D8',
+				accent: '#1F57C3',
+				'accent-secondary': '#163F8F',
+				'tx-primary': '#1A1A1A',
+				'tx-secondary': '#5F5B53'
 			},
-			height: {
-				'project-card': '29rem',
-			},
-			screens: {
-				'base': '990px'
+			fontFamily: {
+				serif: ['"Source Serif 4 Variable"', 'Georgia', 'serif']
 			}
-		},
+		}
 	},
-	plugins: [],
+	plugins: []
 }

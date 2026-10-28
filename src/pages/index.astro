@@ -2,27 +2,25 @@
 import Layout from '../layouts/Layout.astro'
 import SectionContainer from '../components/SectionContainer.astro'
 
-import Hero from '../components/Hero.astro'
+import Intro from '../components/Intro.astro'
+import Experience from '../components/Experience.astro'
 import Projects from '../components/Projects.astro'
 import Awards from '../components/Awards.astro'
-import AboutMe from '../components/AboutMe.astro'
 ---
 
-<Layout title="danielctecla portfolio - software developer and student">
-	<main class="relative px-4">
-		<SectionContainer id="home" class="py-20 md:py-36">
-			<Hero />
+<Layout title="Daniel Catonga">
+	<main class="space-y-12 px-4 pt-10">
+		<SectionContainer>
+			<Intro />
 		</SectionContainer>
-		<div class="space-y-24">
-			<SectionContainer id="projects">
-				<Projects />
-			</SectionContainer>
-			<SectionContainer id="awards">
-				<Awards />
-			</SectionContainer>
-			<SectionContainer id="about">
-				<AboutMe />
-			</SectionContainer>
-		</div>
+		<SectionContainer id="experience" label="Experience">
+			<Experience />
+		</SectionContainer>
+		<SectionContainer id="projects" label="Projects">
+			<Projects />
+		</SectionContainer>
+		<SectionContainer id="awards" label="Awards">
+			<Awards />
+		</SectionContainer>
 	</main>
 </Layout>

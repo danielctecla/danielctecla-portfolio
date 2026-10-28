@@ -1,0 +1,27 @@
+---
+interface Props {
+	title: string
+	href?: string
+	meta?: string
+	date: string
+}
+
+const { title, href, meta, date } = Astro.props
+---
+
+<li class="prose-links">
+	<div class="flex items-baseline justify-between gap-4">
+		<h3 class="font-medium">
+			{href ? <a href={href} target="_blank" rel="noopener">{title}</a> : title}
+		</h3>
+		<span class="shrink-0 font-mono text-xs text-tx-secondary">{date}</span>
+	</div>
+	{meta && <p class="text-sm text-tx-secondary">{meta}</p>}
+	{
+		Astro.slots.has('default') && (
+			<p class="mt-1.5 text-[15px] leading-relaxed">
+				<slot />
+			</p>
+		)
+	}
+</li>
